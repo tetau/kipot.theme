@@ -1,0 +1,109 @@
+@charset "utf-8";
+@import "../config/_base_setting";
+@import "../config/_mixin";
+
+/*-----------------------------------------------
+ __footer
+-----------------------------------------------*/
+
+.md_footer {
+    background: $c1;
+    color: #eee;
+    padding: 60px 0;
+}
+.md_footer__infoWrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.md_footer__listWrap {
+}
+.md_footer__mainNav {
+    > li {
+        margin: .75em 0;
+        &.md_footer__logo {
+            margin: 0;
+            margin-bottom: 30px;
+            a {
+                display: block;
+            }
+        }
+        a {
+            display: inline-block;
+            box-sizing: border-box;
+            color: #eee;
+            text-decoration: none;
+        }
+    }
+}
+
+.md_footer__listNav {
+    border-left: 1px solid #eee;
+    padding-left: 1.5em;
+    > li {
+        line-height: 1.5;
+        padding: .25em 0;
+        a {
+            display: inline-block;
+            box-sizing: border-box;
+            color: #eee;
+            text-decoration: none;
+            padding: .2em 0;
+            position: relative;
+            &:before {
+                content: '-';
+                padding-right: .5em;
+            }
+            &:after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                background: #eee;
+                height: 1px;
+                opacity: 0;
+                transition: all .2s linear;
+            }
+            &:hover {
+                &:after {
+                    opacity: 1;
+                }
+            }
+        }
+        .subnav {
+            li {
+                a {
+                    margin-left: 2em;
+                    &:before {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+.md_footer__listNavTtl {
+    margin-bottom: 1em;
+    &.marginTop {
+        margin-top: 2em;
+    }
+    a {
+        display: inline-block;
+        box-sizing: border-box;
+        color: #eee;
+        text-decoration: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+

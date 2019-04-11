@@ -76,26 +76,13 @@
 <?php endif; ?>
 
 <?php if( is_home()):?>
-<meta property="og:title" content="小型バスから大型バスまで、送迎・貸し切りバスなら白浜の田辺観光バス(株式会社トラフィックコンフォート)" />
-<meta property="og:description" content="和歌山県白浜町の田辺観光バス・TCトラベル（株式会社トラフィックコンフォート）の公式webサイト。貸切バス、バスツアー、航空券や新幹線、宿泊施設などの旅行手配はお任せください。バスでの送迎、少人数の個人・家族旅行から町内会など各種団体・社員旅行まで幅広くご相談いただけます。白浜・田辺発着のバスツアーはもちろん、白浜・熊野古道・串本・勝浦などの紀南の旅行プランも。ご相談・お見積もりは専門の旅行デスクが無料にて承ります。"/>
-<?php elseif( is_singular( 'journey' )):?>
-<meta property="og:title" content="<?php the_title();?>" />
-<meta property="og:description" content="<?php echo mb_substr($desc, 0, 160); ?>"/>
-<?php elseif( is_post_type_archive( 'tour' )):?>
-<meta property="og:title" content="田辺観光バスのバスツアー「たな缶ツアー」" />
-<meta property="og:description" content="魅力いっぱいのツアーを気軽に楽しめる田辺観光バスのバスツアー「たな缶ツアー」。企画担当者のビーグル犬、たな犬がグイグイ引率してくれます。旅の楽しみのグルメもいっぱい。お子様にも人気で、リピート続出。安全で快適なバスに乗って参加しましょう。"/>
-<?php elseif(is_tax( array('tourcat','tour_destination','tourtag') ) ) : ?>
-<?php $term_object = get_queried_object();?>
-<meta property="og:title" content="<?php echo esc_attr($term_object->name);?> 田辺観光バスのバスツアー「たな缶ツアー」" />
-<meta property="og:description" content="<?php echo esc_attr($term_object->name);?>一覧ページ。魅力いっぱいのツアーを気軽に楽しめる田辺観光バスのバスツアー「たな缶ツアー」。企画担当者のビーグル犬、たな犬がグイグイ引率してくれます。旅の楽しみのグルメもいっぱい。お子様にも人気で、リピート続出。安全で快適なバスに乗って参加しましょう。"/>
-<?php elseif( is_singular( 'tour' )):?>
-<meta property="og:title" content="「たな缶ツアー」 <?php the_title();?>" />
-<meta property="og:description" content="<?php the_title();?> <?php if(get_field('tour_sales')): ?><?php echo stripslashes(strip_tags(strip_shortcodes(mb_substr(get_field('tour_sales'), 0, 100))));?><?php endif; ?>"/>
+<meta property="og:title" content="小" />
+<meta property="og:description" content=""/>
 <?php else: ?>
 <meta property="og:title" content="<?php bloginfo('name'); ?> <?php the_title(); ?>" />
 <meta property="og:description" content="<?php bloginfo('name'); ?>の<?php the_title(); ?>ページです。<?php echo mb_substr($desc, 0, 160); ?>"/>
 <?php endif; ?>
-<meta property="og:site_name" content="田辺観光バス Traffic Confort" />
-<meta property="fb:app_id" content="293819258070572" />
+<meta property="og:site_name" content="" />
+<meta property="fb:app_id" content="" />
 
 

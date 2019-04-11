@@ -1,6 +1,6 @@
 @charset "utf-8";
-@import "../core/mixin";
-@import "../base/_base_setting";
+@import "../config/_base_setting";
+@import "../config/_mixin";
 
 /*-----------------------------------------------
  __Drawer_menu
@@ -30,10 +30,6 @@
     -webkit-overflow-scrolling: touch;
     background: #fff;
 }
-
-
-
-
 
 
 /*--------- sidr --------*/

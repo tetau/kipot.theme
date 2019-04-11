@@ -11,35 +11,43 @@
     <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.ico" />
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/default.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" />
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/common.css" />
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-124844484-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-124844484-1');
-    </script>
 </head>
 
-<body<?php if(is_page('information')){ echo ' onload="initialize();"'; } ?>>
+<body>
     <div class="wrapper" id="top">
+        <div class="l_mainVisual">
+            <h2 class="l_mainVisual__copy"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/mv_copy.svg" alt="子どもの未来のために今できることを考える。" width="500"></h2>
+        </div>
         <header class="md_header" data-role="header">
-            <div class="md_head__navWrap">
-                <div class="md_glnavi__triger" id="drawer_trigger">
-                    <span></span><span></span><span></span>
-                </div>
-                <div class="md_glnavi__totop" id="totop">
-                    <a href="#contents" class="md_arrow bottom glm"></a>
-                </div>
-            </div>
-            <div class="md_head__ttlWrap">
-                <h1 class="fz_15 md_head__ttl<?php if(is_home()){ echo ' home'; } ?>"><a href="<?php echo home_url(); ?>">田辺観光バス<span>Traffic Confort</span></a></h1>
-                <div class="md_head__info">
-                    <p class="md_head__sns"><a href="https://www.facebook.com/Traffic.Comfort/"><i class="fab fa-facebook-f"></i></a></p>
-                    <p class="fz_12 md_head__copy">&copy; Traffic Comfort Inc.</p>
+            <div class="l_row mx_1366 pd_side">
+                <div class="md_header__wrap">
+                    <h1 class="md_head__logo">
+                        <a href="<?php echo home_url('/'); ?>">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/main_tagline.svg" alt="ママの笑顔が子供の笑顔" width="200">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/main_logo.svg" alt="キポット" width="200">
+                        </a>
+                    </h1>
+                    <nav class="fz_16 fw700 md_head__navWrap">
+                        <ul>
+                            <li><a href="#">キポットとは？</a></li>
+                            <li><a href="#">イベントの託児</a></li>
+                            <li><a href="#">セミナー事業</a></li>
+                            <li><a href="#">ちょいジョブ</a></li>
+                            <li><a href="#">お問い合わせ</a></li>
+                            <li class="fb"><a href="#">Facebook</a></li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
         </header>
+
+
+
+        <main role="main" class="md_main">
+
+            <div class="md_glnavi__triger" id="drawer_trigger">
+                <span></span><span></span><span></span>
+            </div>
+
+

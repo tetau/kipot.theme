@@ -1,16 +1,71 @@
 @charset "utf-8";
-@import "base/_base_setting";
-@import "core/_mixin";
+@import "../config/_base_setting";
+@import "../config/_mixin";
 
 
 /*-- mailform --*/
 
 .form_wrapper {
     padding: 40px 0;
+    padding-top: 80px;
     .form_fix {
         padding: 0;
     }
 }
+
+form.wpcf7-form.sent {
+    .form_fix {
+        display: none;
+    }
+    .form_confirm {
+        position: static;
+        animation: confirm .5s .2s ease-in forwards;
+    }
+}
+
+.form_confirm {
+    max-width: 600px;
+    margin: 0 auto;
+    position: absolute;
+    opacity: 0;
+    .innr {
+        padding: 30px 5%;
+        border: 3px double #3B5998;
+        border-right: none;
+        border-left: none;
+    }
+}
+.form_confirm__ttl {
+    color: #3B5998;
+    margin-bottom: .5em;
+}
+.form_confirm__link {
+    padding-top: 20px;
+    text-align: center;
+    a {
+        text-decoration: none;
+        display: inline-block;
+        box-sizing: border-box;
+        white-space: nowrap;
+        line-height: 1;
+        padding : 1em 3em;
+        color: #fff;
+        background: #3B5998;;
+        font-size: 13px;
+        border-radius: 20px;
+    }
+}
+
+@keyframes confirm {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
 .form_outer__ttl {
 }
 .form_outer__column {
@@ -239,6 +294,13 @@
                 }
             }
         }
+        &.inline {
+            margin-left: auto;
+            width: 70%;
+            @include media(480px) {
+                width: 100%;
+            }
+        }
         .tbl_cel {
             flex: 0 1 70%;
             width: 70%;
@@ -285,6 +347,7 @@
             text-align: right;
             box-sizing: border-box;
             padding-right: 20px;
+            white-space: nowrap;
             @include media(960px) {
                 flex: 0 1 35%;
                 width: 35%;
@@ -320,6 +383,9 @@
             &.optional:after {
                 content: "任意";
                 background: #ccc;
+            }
+            &.pdl {
+                padding-left: 1em;
             }
         }
         .attention {
@@ -505,9 +571,10 @@
     }
 }
 .form_section__subcolumn {
-    padding-left: 25%;
+    background: #eee;
+    padding: 1em;
+    margin: 1em 0;
 }
-
 
 /* overwrite wpcf7 */
 div.wpcf7 {
@@ -518,8 +585,10 @@ div.wpcf7 img.ajax-loader {
     margin: .5em auto 0 auto!important;
 }
 div.wpcf7-response-output {
-    position: relative;
-    bottom: -20px;
+    // position: relative;
+    // bottom: -20px;
+    position: absolute;
+    top: 20px;
     background: none;
     border: none;
     text-align: center;
@@ -542,9 +611,9 @@ div.wpcf7-validation-errors {
 }
 div.wpcf7-mail-sent-ok {
     color: #fff;
-    position: absolute;
-    top: 50%;
-    height: 40px;
+    background: #000;
+    padding: 1em ;
+    background: #3B5998;
 }
 .wpcf7-not-valid {
     border-color: $formcolor!important;
@@ -556,7 +625,7 @@ span.wpcf7-not-valid-tip {
     font-size: 12px!important;
     background: transparent!important;
     border: none!important;
-    color: $formcolor!important;
+    color: #dc143c!important;
     box-sizing: border-box!important;
     padding: .5em 10px 0 10px!important;
     line-height: 1.4!important;
@@ -569,4 +638,6 @@ span.wpcf7-not-valid-tip {
 }
 .wpcf7-validation-errors {
     display: block;
+    background: transparent!important;
+    color: #dc143c!important;
 }
