@@ -1,5 +1,7 @@
 (function($) {
     $(function(){
+        // AOS
+        AOS.init();
 
         // スムーズスクロール
         var notList = '#togmenu a[href^="#"], a.remodal-close,a[href^="#0"],a[href^="#wpcf7"]';
@@ -19,6 +21,27 @@
             var tgt    = $(hash);
             var pos    = tgt.offset().top;
             $("html, body").animate({scrollTop:pos}, 300, "swing");
+        }
+
+        //header fix
+        if($('#fixheader').length){
+            var trigger = $('#fixheader').offset().top;
+            var showFlag = false;
+            console.log(trigger);
+            $(window).scroll(function () {
+                var windowTop = $(this).scrollTop();
+                if (windowTop >= trigger) {
+                    if (showFlag == false) {
+                        showFlag = true;
+                        $('#fixheader').addClass('fixed')
+                    }
+                } else if (windowTop <= trigger) {
+                    if (showFlag) {
+                        showFlag = false;
+                        $('#fixheader').removeClass('fixed');
+                    }
+                }
+            });
         }
 
 

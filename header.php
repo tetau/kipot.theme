@@ -10,41 +10,55 @@
     <script src="//code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.ico" />
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/default.css" />
+    <link href="//unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/common.css" />
 </head>
 
 <body>
     <div class="wrapper" id="top">
-        <div class="l_mainVisual">
-            <h2 class="l_mainVisual__copy"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/mv_copy.svg" alt="子どもの未来のために今できることを考える。" width="500"></h2>
-        </div>
-        <header class="md_header" data-role="header">
-            <div class="l_row mx_1366 pd_side">
-                <div class="md_header__wrap">
-                    <h1 class="md_head__logo">
-                        <a href="<?php echo home_url('/'); ?>">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/main_tagline.svg" alt="ママの笑顔が子供の笑顔" width="200">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/main_logo.svg" alt="キポット" width="200">
-                        </a>
-                    </h1>
-                    <nav class="fz_16 fw700 md_head__navWrap">
-                        <ul>
-                            <li><a href="#">キポットとは？</a></li>
-                            <li><a href="#">イベントの託児</a></li>
-                            <li><a href="#">セミナー事業</a></li>
-                            <li><a href="#">ちょいジョブ</a></li>
-                            <li><a href="#">お問い合わせ</a></li>
-                            <li class="fb"><a href="#">Facebook</a></li>
-                        </ul>
-                    </nav>
-                </div>
+        <?php if(is_home()) :?>
+            <div class="l_mainVisual home">
+                <h2 class="l_mainVisual__copy"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/mv_copy.svg" alt="子どもの未来のために今できることを考える。" width="500"></h2>
             </div>
-        </header>
+        <?php endif; ?>
+        <div class="md_header__wrap">
+            <header class="md_header" data-role="header" id="fixheader">
+                <div class="l_row mx_1366 pd_side">
+                    <div class="md_header__wrap">
+                        <?php if(is_page()) :?>
+                            <h1 class="md_title"><?php the_title();?></h1>
+                        <?php endif; ?>
+                        <?php if(is_home()) :?>
+                            <h1 class="md_head__logo">
+                                <a href="<?php echo home_url('/'); ?>">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/main_tagline.svg" alt="ママの笑顔が子供の笑顔" width="200">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/main_logo.svg" alt="キポット" width="180">
+                                </a>
+                            </h1>
+                        <?php else :?>
+                            <h2 class="md_head__logo">
+                                <a href="<?php echo home_url('/'); ?>">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/main_tagline.svg" alt="ママの笑顔が子供の笑顔" width="200">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/main_logo.svg" alt="キポット" width="180">
+                                </a>
+                            </h2>
+                        <?php endif; ?>
+                        <nav class="fz_16 fw700 md_head__navWrap">
+                            <ul>
+                                <li><a href="<?php echo home_url('/'); ?>about/">キポットとは？</a></li>
+                                <li><a href="#">イベントの託児</a></li>
+                                <li><a href="#">セミナー事業</a></li>
+                                <li><a href="#">ちょいジョブ</a></li>
+                                <li><a href="#">お問い合わせ</a></li>
+                                <li class="fb"><a href="#">Facebook</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+        </div>
 
-
-
-        <main role="main" class="md_main">
 
             <div class="md_glnavi__triger" id="drawer_trigger">
                 <span></span><span></span><span></span>

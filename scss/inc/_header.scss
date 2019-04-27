@@ -9,43 +9,67 @@
 
 .l_mainVisual {
     height: 80vh;
-    background-image: url(../images/top_cover.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
     max-width: 1920px;
     margin: 0 auto;
     position: relative;
     overflow: hidden;
     min-height: 800px;
     max-height: 960px;
-    &:before {
-        content: '';
-        position: absolute;
-        top: -8%;
-        left: 90%;
-        background-image: url(../images/gra_bar__brn.svg);
+    z-index: 1;
+    &.home {
+        background-image: url(../images/top_cover.jpg);
         background-size: cover;
         background-repeat: no-repeat;
-        background-position: left center;
-        height: 160px;
-        width: 800px;
-        transform-origin: left top;
-        animation: mv_bar__brn 1s ease .8s 1 normal forwards;
-        transform: rotate(-45deg) translateX(70%);
+        background-position: center center;
+        &:before {
+            content: '';
+            position: absolute;
+            top: -8%;
+            left: 90%;
+            background-image: url(../images/gra_bar__brn.svg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: left center;
+            height: 160px;
+            width: 800px;
+            transform-origin: left top;
+            animation: mv_bar__brn 1s ease .8s 1 normal forwards;
+            transform: rotate(-45deg) translateX(70%);
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: -20%;
+            right: 42%;
+            background-image: url(../images/gra_bar__org.svg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: left center;
+            height: 160px;
+            width: 800px;
+            animation: mv_bar__org 1s ease 1.4s 1 normal forwards;
+        }
     }
-    &:after {
-        content: '';
-        position: absolute;
-        bottom: -20%;
-        right: 42%;
-        background-image: url(../images/gra_bar__org.svg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: left center;
-        height: 160px;
-        width: 800px;
-        animation: mv_bar__org 1s ease 1.4s 1 normal forwards;
+    &.about {
+        background: $c2;
+        overflow: inherit;
+        height: 70vh;
+        min-height: 700px;
+        max-height: 700px;
+        &:after {
+            content: '';
+            position: absolute;
+            left: 48%;
+            bottom: -5%;
+            background-image: url(../images/pAbout_mv.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: center bottom;
+            width: 90%;
+            padding-top: 60%;
+            transform: translate(-50%);
+            z-index: 2;
+        }
     }
 }
 .l_mainVisual__copy {
@@ -53,6 +77,17 @@
     top: 40%;
     right: 20%;
     transform: translateY(-50%);
+    &.about {
+        right: auto;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        .read {
+            color: $c1;
+            text-align: center;
+            display: block;
+            padding-bottom: 1em;
+        }
+    }
     img {
         max-width: 100%;
         height: auto;
@@ -81,11 +116,26 @@
 /*-----------------------------------------------
  __header
 -----------------------------------------------*/
-
+.md_title {
+    position: absolute;
+    left: 0;
+    bottom: -2em;
+    z-index: -1;
+}
+.md_header__wrap {
+    position: relative;
+    overflow: hidden;
+}
 .md_header {
     background: #fff;
-    position: relative;
-    z-index: 2;
+    position: absolute;
+    z-index: 10000;
+    width: 100%;
+    height: 100px;
+    top: 0;
+    &.fixed {
+        position: fixed;
+    }
 }
 
 
@@ -189,6 +239,7 @@
     }
 }
 .md_head__logo {
+    align-self: center;
     img {
         max-width: 100%;
         height: auto;
@@ -201,7 +252,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-end;
-    padding: 15px 0;
+    height: 100px;
 }
 .md_head__navWrap {
     ul {
@@ -210,6 +261,7 @@
         flex-wrap: wrap;
         justify-content: flex-start;
         align-items: flex-start;
+        padding-bottom: 10px;
     }
     li {
         position: relative;

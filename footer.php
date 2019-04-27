@@ -1,4 +1,4 @@
-</main><!-- main -->
+
 </div><!-- .wrapper-->
 
 <footer>
@@ -56,6 +56,7 @@
 <?php if(is_home()): ?><?php endif; ?>
 
 <script src="<?php echo get_template_directory_uri(); ?>/assets/js/common.js"></script>
+<script src="//unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 <?php if(is_page(array('contact','tour_reservation'))): ?>
     <?php if ( function_exists( 'wpcf7_enqueue_scripts' ) ) {
