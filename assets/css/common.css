@@ -1282,6 +1282,10 @@ __common
   background: #eee;
 }
 
+.md_pCommon.recruit {
+  padding: 0;
+}
+
 .md_pCommon__head {
   padding-bottom: 60px;
 }
@@ -2189,6 +2193,11 @@ __pEntry
   padding: 15px;
 }
 
+.pEntry.entry {
+  margin-top: 40px;
+  margin-bottom: 0px;
+}
+
 @media screen and (max-width: 540px) {
   .pEntry {
     padding-top: 10px;
@@ -2507,6 +2516,171 @@ __policy
   list-style: disc;
   margin-left: 1.5em;
   padding: .4em 0;
+}
+
+/*--------
+__pRecruit
+-----------------------------------------------*/
+.pRecruit > li {
+  margin: 60px 0;
+  padding: 2em 5%;
+  border: 3px solid #008650;
+  border-radius: 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media screen and (max-width: 767px) {
+  .pRecruit > li {
+    margin: 30px 0;
+  }
+}
+
+.pRecruit_ttl {
+  color: #008650;
+  padding-bottom: 1em;
+  padding-left: 5%;
+  padding-right: 5%;
+  border-bottom: 3px solid #008650;
+  margin-bottom: 40px;
+}
+
+@media screen and (max-width: 600px) {
+  .pRecruit_ttl {
+    margin-bottom: 20px;
+  }
+}
+
+.pRecruit_ttl em {
+  display: block;
+  font-style: normal;
+  font-size: .75em;
+}
+
+.pRecruit_summary {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+@media screen and (max-width: 600px) {
+  .pRecruit_summary {
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 12px;
+  }
+}
+
+.pRecruit_summary p {
+  margin-bottom: 1em;
+}
+
+.pRecruit_summary p:last-child {
+  margin-bottom: 0;
+}
+
+.pRecruit_section {
+  margin-top: 40px;
+}
+
+@media screen and (max-width: 600px) {
+  .pRecruit_section {
+    margin-top: 20px;
+  }
+}
+
+.pRecruit_sub__ttl {
+  padding-bottom: .5em;
+  padding-left: 5%;
+  padding-right: 5%;
+  border-bottom: 1px solid #008650;
+  margin-bottom: 40px;
+  color: #008650;
+}
+
+@media screen and (max-width: 600px) {
+  .pRecruit_sub__ttl {
+    margin-bottom: 20px;
+  }
+}
+
+.pRecruit_detail {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+@media screen and (max-width: 600px) {
+  .pRecruit_detail {
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 12px;
+  }
+}
+
+.pRecruit_detail .wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  border-bottom: 1px solid #ddd;
+  padding-top: .5em;
+  padding-bottom: .5em;
+}
+
+.pRecruit_detail .wrap:first-child {
+  padding-top: 0;
+}
+
+.pRecruit_detail dt {
+  font-weight: bold;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 9em;
+          flex: 0 1 9em;
+  padding-left: 1em;
+}
+
+@media screen and (max-width: 600px) {
+  .pRecruit_detail dt {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 6em;
+            flex: 0 1 6em;
+  }
+}
+
+.pRecruit_detail dd {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 1.5em;
+  padding-right: 1em;
+}
+
+.pRecruit_detail .tag {
+  text-align: left;
+}
+
+.pRecruit_detail .tag > li {
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  white-space: nowrap;
+  background: #DEF0E3;
+  line-height: 1;
+  padding: .5em .5em;
+  margin: .4em .25em;
+  border-radius: 5px;
 }
 
 /*--------

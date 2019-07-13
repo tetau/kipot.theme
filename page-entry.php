@@ -17,6 +17,13 @@
                     <p>お客さまから寄せられたQ & Aを掲載しています。お申し込みの前にこちらもご確認ください。</p>
                     <div class="fz_15 md_sausageBtn pContact_btn"><a href="<?php echo home_url('/'); ?>faq/">Q & A</a></div>
                 </div>
+                <div class="pEntry entry">
+                    <div class="pEntry_head">
+                        <h4 class="fz_18 fw700 pEntry_head__ttl"><span>お急ぎの場合にはお電話でもお受けいたします</span></h4>
+                        <div class="phone"><a href="tel:0368699117" class="">03-6869-9117</a><p class="fz_13 note">営業時間：平日9:00-17:00</p></div>
+                        <div class="email"><a href="mailto:info@ki-pot.com" class="">info@ki-pot.com</a></div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="pContact">
