@@ -10,7 +10,101 @@ __common
     z-index: 2;
     background: #fff;
     overflow: hidden;
+    &.page {
+        padding-top: 60px;
+    }
 }
+
+.md_page__head {
+    background: #eee;
+    padding: 80px 0;
+    text-align: center;
+    @include media(767px) {
+        padding: 40px 0;
+    }
+}
+
+.md_pCommon {
+    padding: 60px 0;
+    @include media(767px) {
+        padding: 30px 0;
+    }
+    &.error {
+        background: #eee;
+        padding: 15vw 0;
+    }
+}
+.md_pCommon__head {
+    padding-bottom: 60px;
+}
+.md_section__summary {
+    &.tac {
+        text-align: center;
+        p {
+            text-align: left;
+            display: inline-block;
+            box-sizing: border-box;
+        }
+    }
+    a.totop {
+        margin-top: 1em;
+        text-decoration: none;
+        display: inline-block;
+        box-sizing: border-box;
+        color: $c1;
+        position: relative;
+        padding-bottom: .25em;
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 2px;
+            width: 100%;
+            background: $c1;
+        }
+        &:hover {
+            &:after {
+                animation: link_bar .5s ease 1;
+                width: 100%;
+            }
+        }
+    }
+}
+@keyframes link_bar {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+
+.md_sausageBtn {
+    a,span {
+        display: inline-block;
+        box-sizing: border-box;
+        text-decoration: none;
+        color: #fff;
+        background: $c1;
+        font-weight: bold;
+        white-space: nowrap;
+        padding: .5em 2.5em;
+        min-width: 180px;
+        text-align: center;
+        border-radius: 2em;
+        transition: all .1s linear;
+        @include media(600px) {
+            font-size: 13px;
+            min-width: 120px;
+        }
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+}
+
 
 /*--------
 __top
@@ -589,9 +683,196 @@ __about
 
 
 /*--------
+__pContact
+-----------------------------------------------*/
+.pContact {}
+.pContact_intro {
+    padding-bottom: 60px;
+    .column {
+        margin-bottom: 40px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+.pContact_intro__ttl {
+    margin-bottom: .5em;
+    color: $c1;
+}
+.pContact_intro__summary {
+    &.tac {
+        text-align: center;
+        p {
+            display: inline-block;
+            box-sizing: border-box;
+            text-align: left;
+        }
+    }
+}
+.pContact_btn {
+    margin-top: 1em;
+}
+.pContact_note {
+    padding-top: 40px;
+    ul {
+        margin-left: 1.5em;
+        list-style: disc;
+    }
+}
+.pContact_note__ttl {
+    margin-bottom: .5em;
+}
+.pContact_form {
+    background: #f6f6f6;
+    padding: 60px 0;
+    @include media(767px) {
+        padding: 30px 0;
+    }
+}
+.pContact_form__ttl {
+    text-align: center;
+    color: $c1;
+    padding-bottom: 1em;
+}
+
+/*--------
+__policy
+-----------------------------------------------*/
+.pg_policy {
+    .innr {
+        max-width: 1200px;
+        box-sizing: border-box;
+        margin: 0 auto;
+    }
+}
+.pg_policy__wrap {
+
+}
+.section_page_contents.policy {
+    line-height: 1.6;
+    @include media(767px) {
+        font-size: 13px;
+    }
+    .section_page_inner {
+        background: #fff;
+        box-sizing: border-box;
+        margin: 0 auto;
+        position: relative;
+        z-index: 2;
+    }
+    .chapter {
+        padding: 3% 0;
+        &:first-child {
+            //padding-top: 6%;
+        }
+        &:last-child {
+            padding-bottom: 6%;
+        }
+        &.description {
+            padding-top: 0;
+        }
+        &.first {
+            padding-top: 6%;
+        }
+        &.last{
+            padding-bottom: 6%;
+        }
+        &.update {
+            font-size: 12px;
+            text-align: right;
+            @include media(660px) {
+                font-size: 10px;
+                text-align: center;
+            }
+        }
+        &.action {
+            text-align: center;
+            .link {
+                display: inline-block;
+                text-decoration: none;
+                border: 1px solid $c1;
+                color: $c1;
+                padding: 1em 3em;
+                &:hover {
+                    background: $c1;
+                    color: #fff;
+                    transition: all 0.2s linear;
+                }
+            }
+        }
+        .chapter_inner {
+        }
+        .chapter_title {
+            border-bottom: 1px solid #eee;
+            padding-bottom: 1em;
+            margin-bottom: 1em;
+            font-weight: bold;
+            @include media(660px) {
+            }
+        }
+        .chapter_sub_title {
+            font-weight: bold;
+            margin-bottom: .5em;
+        }
+        p {
+            margin-bottom: .8em;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .sb_column {
+        padding-top: 2em;
+    }
+    .list_table {
+        width: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
+        dt {
+            float: left;
+            clear: left;
+            width: 25%;
+            box-sizing: border-box;
+            padding: .5em 3%;
+            border-top: 1px dotted #ddd;
+            &:first-of-type {
+                border-top: none;
+            }
+        }
+        dd {
+            float: left;
+            width: 75%;
+            box-sizing: border-box;
+            padding: .5em 3%;
+            border-top: 1px dotted #ddd;
+            &:first-of-type {
+                border-top: none;
+            }
+        }
+    }
+    .list_cont {
+        li {
+            list-style: disc;
+            margin-left: 1.5em;
+            padding: .4em 0;
+        }
+    }
+}
+
+
+/*--------
 __error
 -----------------------------------------------*/
-
+.page_error__title {
+    text-align: center;
+    margin-bottom: 2em;
+    span {
+        display: inline-block;
+        box-sizing: border-box;
+        text-align: left;
+        color: $c1;
+    }
+}
 .md_pageHeader {
     &.page__error {
         padding: 200px 5%;

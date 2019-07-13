@@ -1,5 +1,5 @@
 {
-  "name": "kipot",
+  "name": "kipot.theme",
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
@@ -8,20 +8,26 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@bitbucket.org/hacca/kipot.theme.git"
+    "url": "git+https://github.com/tetau/kipot.theme.git"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/hacca/kipot.theme#readme",
+  "bugs": {
+    "url": "https://github.com/tetau/kipot.theme/issues"
+  },
+  "homepage": "https://github.com/tetau/kipot.theme#readme",
   "devDependencies": {
-    "browser-sync": "^2.26.3",
-    "gulp": "^4.0.0",
-    "gulp-autoprefixer": "^6.0.0",
-    "gulp-filter": "^5.1.0",
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-filter": "^6.0.0",
     "gulp-notify": "^3.2.0",
     "gulp-plumber": "^1.2.1",
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5"
-  }
+  },
+  "browserslist": [
+    "last 2 versions",
+    "Firefox ESR"
+  ]
 }

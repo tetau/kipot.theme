@@ -117,156 +117,108 @@
  __header
 -----------------------------------------------*/
 .md_title {
-    position: absolute;
-    left: 0;
-    bottom: -2em;
-    z-index: -1;
-}
-.md_header__wrap {
-    position: relative;
-    overflow: hidden;
+    color: $c1;
+    &.hero {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        color: #fff;
+    }
 }
 .md_header {
     background: #fff;
     position: absolute;
-    z-index: 10000;
+    z-index: 100;
     width: 100%;
-    height: 100px;
     top: 0;
+    left: 0;
     &.fixed {
         position: fixed;
+        .md_head__logo .tagline {
+            display: none;
+        }
     }
 }
-
-
-.md_glnavi__triger {
+.md_header__outer {
     position: relative;
-    width: 60px;
-    height: 60px;
-    box-sizing: border-box;
-    cursor: pointer;
-    transition: background 0.2s linear;
-    z-index: 999999;
-    display: none;
-    &:hover {
-        background: #eee;
-    }
-    span {
-        display: block;
-        width: 36px;
-        height: 2px;
-        border-radius: 4px;
-        background: #000;
-        position: absolute;
-        left: 12px;
-        top: 18px;
-        &:nth-child(1) {
-            animation: glnavi__triger1 6s ease-in-out 0s infinite;
-        }
-        &:nth-child(2) {
-            top: 26px;
-            width: 27px;
-            animation: glnavi__triger2 6s ease-in-out .15s infinite;
-        }
-        &:nth-child(3) {
-            top: 34px;
-            width: 18px;
-            animation: glnavi__triger3 6s ease-in-out .3s infinite;
-        }
-    }
-    @keyframes glnavi__triger1 {
-        0%{
-            left: 12px;
-            opacity:1;
-            width: 36px;
-        }
-        5%,15%{
-            left:-5px;
-            opacity:0;
-            width: 0;
-        }
-        20%{
-            left: 12px;
-            opacity:1;
-            width: 36px;
-        }
-        100%{
-            opacity:1;
-            width: 36px;
-        }
-    }
-    @keyframes glnavi__triger2 {
-        0%{
-            left: 12px;
-            opacity:1;
-            width: 27px;
-        }
-        5%,15%{
-            left:-5px;
-            opacity:0;
-            width: 0%;
-        }
-        20%{
-            left: 12px;
-            opacity:1;
-            width: 27px;
-        }
-        100%{
-            opacity:1;
-            width: 27px;
-        }
-    }
-    @keyframes glnavi__triger3 {
-        0%{
-            left: 12px;
-            opacity:1;
-            width: 18px;
-        }
-        5%,15%{
-            left:-5px;
-            opacity:0;
-            width: 0%;
-        }
-        20%{
-            left: 12px;
-            opacity:1;
-            width: 18px;
-        }
-        100%{
-            opacity:1;
-            width: 18px;
-        }
-    }
 }
 .md_head__logo {
     align-self: center;
+    padding-left: 3%;
     img {
         max-width: 100%;
         height: auto;
         display: block;
+        &.tagline {
+            @include media(1200px) {
+                width: 160px;
+            }
+            @include media(660px) {
+                width: 100px;
+            }
+        }
+        &.logo {
+            .fixed & {
+                width: 140px;
+                @include media(660px) {
+                    width: 90px;
+                }
+            }
+            @include media(1200px) {
+                width: 140px;
+            }
+            @include media(660px) {
+                width: 90px;
+            }
+        }
     }
 }
 .md_header__wrap {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: space-between;
-    align-items: flex-end;
-    height: 100px;
+    align-items: center;
+    padding: 10px 0;
+    transition: all .1s linear;
+    @include media(660px) {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .fixed & {
+        padding: 0;
+    }
 }
 .md_head__navWrap {
     ul {
         display: flex;
         flex-direction: row;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         justify-content: flex-start;
-        align-items: flex-start;
-        padding-bottom: 10px;
+        align-items: center;
     }
     li {
+        flex: 0 1 auto;
         position: relative;
+        &.priority2 {
+            @include media(1200px) {
+                display: none;
+            }
+        }
+        &.priority1 {
+            @include media(660px) {
+                display: none;
+            }
+        }
         &.fb {
             margin-left: 2em;
+            @include media(1200px) {
+                margin-left: 0;
+            }
+            @include media(960px) {
+                display: none;
+            }
             &:after {
                 display: none;
             }
@@ -288,15 +240,85 @@
         }
     }
     a {
+        white-space: nowrap;
         text-decoration: none;
         color: $c1;
         display: inline-block;
         box-sizing: border-box;
         padding: .5em 1.75em;
+        transition: all .1s linear;
+        &:hover {
+            transform: scale(1.1);
+        }
     }
 }
 
 
 
-
+$bar_width: 20px;
+.md_glnavi__triger {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: background 0.2s linear;
+    z-index: 99;
+    cursor: pointer;
+    border: 1px solid transparent;
+    @include media(600px) {
+        height: 50px;
+    }
+    &.home {
+        z-index: 1;
+    }
+    &:hover {
+        span {
+            background: $c1;
+            &:nth-child(1) {
+                animation: glnavi__triger1 1.5s ease-in-out 0s;
+            }
+            &:nth-child(2) {
+                animation: glnavi__triger1 1.5s ease-in-out .15s;
+            }
+            &:nth-child(3) {
+                animation: glnavi__triger1 1.5s ease-in-out .3s;
+            }
+        }
+    }
+    span {
+        transition: all .5s linear;
+        display: block;
+        height: 2px;
+        border-radius: 4px;
+        background: $c1;
+        position: absolute;
+        width: $bar_width;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        &:nth-child(1) {
+            top: calc(50% - 8px);
+        }
+        &:nth-child(3) {
+            top: calc(50% + 8px);
+        }
+    }
+    @keyframes glnavi__triger1 {
+        0%{
+            left:-5px;
+            opacity:0;
+            width: 0;
+        }
+        20%{
+            left: 50%;
+            opacity:1;
+            width: $bar_width;
+        }
+        100%{
+            opacity:1;
+            width: $bar_width;
+        }
+    }
+}
 

@@ -1,23 +1,20 @@
 <?php get_header(); ?>
 
 
-<main class="contents_wrap" role="main">
+<main class="md_main page" role="main">
 
-    <div class="pg_common__head p_60">
-        <div class="innr">
-            <div class="pg_common__logo"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" width="300" alt="田辺観光バス"></div>
-            <h2 class="fz_36 fw700 pg_common__ttl">個人情報保護方針</h2>
-        </div>
+    <div class="md_page__head">
+        <h1 class="fz_28 fw700 md_title">個人情報保護方針</h1>
     </div>
 
-    <div class="pg_policy p_60">
-        <div class="innr">
+    <div class="md_pCommon policy">
+        <div class="l_row mx_1200 pd_side5">
             <div class="pg_policy__wrap">
                 <div id="policy" class="section_page_contents policy">
                     <div class="section_page_inner">
                         <div class="chapter description">
                             <div class="chapter_inner">
-                                <p>株式会社 Traffic Comfort（以下「弊社」といいます）は、弊社にて提供するサービスをご利用されるお客様にご提供いただくお客様個人に関する情報 （氏名、生年月日、その他の特定の個人を識別することができる情報）、ならびに特定の個人と結びついて使用されるメールアドレス、および個人情報と一体となった趣味、年齢その他の個人に関する属性情報（以下「個人情報」といいます） を大切に保護することを株式会社 Traffic Comfortサイト（以下「当サイト」といいます）の重要な社会的使命と認識し、サイトはじめ全担当者が個人情報保護に関する法規範を遵守します。当サイトをご利用いただいた場合、この「個人情報保護方針」に同意していただいたものとさせていただきます。</p>
+                                <p>株式会社 キポット（以下「弊社」といいます）は、弊社にて提供するサービスをご利用されるお客様にご提供いただくお客様個人に関する情報 （氏名、生年月日、その他の特定の個人を識別することができる情報）、ならびに特定の個人と結びついて使用されるメールアドレス、および個人情報と一体となった趣味、年齢その他の個人に関する属性情報（以下「個人情報」といいます） を大切に保護することを株式会社 キポットサイト（以下「当サイト」といいます）の重要な社会的使命と認識し、サイトはじめ全担当者が個人情報保護に関する法規範を遵守します。当サイトをご利用いただいた場合、この「個人情報保護方針」に同意していただいたものとさせていただきます。</p>
                             </div>
                         </div>
                         <section class="chapter">
@@ -68,21 +65,42 @@
                                 <p>個人情報の管理者の所属、連絡先及び、ご自身の個人情報について開示・訂正・削除を希望される場合の連絡先を下記に示します。<br />開示・訂正・削除を希望される場合は、電話・Eメールでご連絡ください。その際にはご本人であることを確認させていただきますので、ご了承ください。</p>
                             </div>
                         </section>
+
+                        <section class="chapter">
+                            <div class="chapter_inner">
+                                <h2 class="chapter_title">SSL・Cookie・Google Analyticsについて</h2>
+                                <ul class="list_cont">
+                                    <li>
+                                        <h3 class="chapter_sub_title">SSLについて</h3>
+                                        <p>当サイトでは、お客様が安心して個人情報の登録ができるように、個人情報を登録するページに暗号化技術のSSL（Secure Sockets Layer）を設定しております。これによりお客様の情報端末等と当サイトのサーバー間の通信は暗号化されて盗聴を防ぐことができます。</p>
+                                    </li>
+                                    <li>
+                                        <h3 class="chapter_sub_title">Cookieについて</h3>
+                                        <p>Cookieとは、Webサーバーからお客様のパソコンのハードディスクに書き込む小さなデータファイルです。この技術は、スムーズなサービスを提供するためだけに用途を限定して使用しており、お客様の個人情報をCookieにより収集することはありませんが、弊社顧客情報をWEBサービスに使用します。「お問い合わせ」や「託児申し込み」の Webフォームに記入すると、弊社では提供された情報を使用して、サービスに関するお客様のご関心事項について連絡させていただきます。</p>
+                                    </li>
+                                    <li>
+                                        <h3 class="chapter_sub_title">Google Analyticsについて</h3>
+                                        <p>当サイトは、サイトの利用状況を把握するため、アクセスログの収集・解析としてGoogle Analyticsを使用しております。Google Analyticsではクッキー（cookie）を使用し個人を特定する情報を含まずにログを収集します。なお、収集されるログはGoogle社のプライバシーポリシーに基づいて管理されます。Google社のプライバシーポリシーについては<a href="https://policies.google.com/privacy?hl=ja" target="new" rel="noopener noreferrer nofollow">こちら</a>をご覧ください。</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+
                         <section class="chapter">
                             <div class="chapter_inner">
                                 <h2 class="chapter_title">その他</h2>
                                 <p>《免責事項》</p>
                                 <ul class="list_cont">
                                     <li>お客様自身が入力されたデータ（e-mailアドレス、電話番号、名前など）に帰すべき事由により起こったトラブルについて、弊社は一切の責任を負いません。</li>
-                                    <li>当サイトに掲載されている情報について、弊社はその正確性・完全性についていかなる保証も行うものではなく、その情報の利用にあたり生じた損害、トラブルにつきまして、一切の責任を負いません。また、提供される情報に明らかな間違いがある場合や企業や利用者の信頼を損ねていると思われる場合は、速やかに訂正・削除致しますので、お手数ですが、株式会社 Traffic Comfortまでご連絡ください。</li>
+                                    <li>当サイトに掲載されている情報について、弊社はその正確性・完全性についていかなる保証も行うものではなく、その情報の利用にあたり生じた損害、トラブルにつきまして、一切の責任を負いません。また、提供される情報に明らかな間違いがある場合や企業や利用者の信頼を損ねていると思われる場合は、速やかに訂正・削除致しますので、お手数ですが、株式会社 キポットまでご連絡ください。</li>
                                     <li>天災、災害、および弊社が防ぎ得ない外的要因・事由により、利用者に損害を与えた場合、弊社はその責任を負いません。</li>
                                     <li>当サイトのすべての情報は、予告無しに変更または削除される場合がありますので、予めご了承ください。</li>
                                 </ul>
                             </div>
                         </section>
                         <div class="chapter update last">
-                            <address>株式会社 Traffic Comfort</address>
-                            <p><time datetime="2018-09-01T10:44:39+09:00">更新日時 2018年9月1日</time></p>
+                            <address>株式会社 キポット</address>
+                            <p><time datetime="2019-07-01T10:44:39+09:00">更新日時 2019年7月1日</time></p>
                         </div>
                     </div>
                 </div>

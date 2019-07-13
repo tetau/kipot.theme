@@ -1,32 +1,5 @@
 <?php
 
-// jquery デフォルトの読み込みcdnに変更
-function include_jquery_cdn_loader() {
-    if( !is_admin() ){
-        //WP Default jQuery Load Deregister.
-        wp_deregister_script('jquery');
-        //jQuery CDN
-        $jsCore = '//code.jquery.com/jquery-3.3.1.min.js';
-        $jsMigrate = '//code.jquery.com/jquery-migrate-1.4.1.min.js';
-        //jQuery CDN Check
-        $core_url = @fopen('http:'.$jsCore, 'r');
-        //jQuery CDN Server Down
-        if( $core_url === false ){
-            $jsCore = home_url( '/' ).'wp-includes/js/jquery/jquery.js';
-        }
-        wp_register_script( 'jquery', $jsCore, array(), null, false );
-        wp_enqueue_script( 'jquery' );
-        $migrate_url = @fopen('http:'.$jsMigrate, 'r');
-        //jQuery Migrate CDN Server Down
-        if( $migrate_url === false ){
-            $jsMigrate = home_url( '/' ).'wp-includes/js/jquery/jquery-migrate.min.js';
-        }
-        wp_register_script( 'jquery_migrate', $jsMigrate, array(), null, false );
-        wp_enqueue_script( 'jquery_migrate' );
-    }
-}
-add_action('wp_enqueue_scripts', 'include_jquery_cdn_loader');
-
 //サムネイルサイズ
 add_theme_support('post-thumbnails');
 add_image_size( 'original_thumbsq_lrg', 500, 500, true );
@@ -51,7 +24,9 @@ add_theme_support( 'html5', array('search-form', 'comment-form', 'comment-list',
 add_theme_support( 'post-formats', array('aside', 'image', 'video', 'audio', 'quote', 'link', 'gallery',) );
 
 //投稿ページ 独自css
-add_editor_style('editor-style.css');
+add_editor_style('assets/css/editor-style.css');
+//Guteberg独自css
+add_theme_support( 'editor-styles' );
 
 require_once locate_template('function_inc/fun_output-ext.php');             //  テキストなどの出力回り
 require_once locate_template('function_inc/fun_posttype.php');               //  ポストタイプ
@@ -59,10 +34,32 @@ require_once locate_template('function_inc/fun_getpost.php');                // 
 require_once locate_template('function_inc/fun_admin.php');              //  管理画面関係
 
 
-// テスト案件
-
 //管理画面 [設定 - メディア] で指定する 「大サイズ」 の幅の上限
 if ( ! isset( $content_width ) ) $content_width = 1200;
 
+
+//メールの再入力チェック
+function wpcf7_main_validation_filter( $result, $tag ) {
+  $type = $tag['type'];
+  $name = $tag['name'];
+  $_POST[$name] = trim( strtr( (string) $_POST[$name], "\n", " " ) );
+  if ( 'email' == $type || 'email*' == $type ) {
+    if (preg_match('/(.*)_confirm$/', $name, $matches)){
+      $target_name = $matches[1];
+      if ($_POST[$name] != $_POST[$target_name]) {
+        if (method_exists($result, 'invalidate')) {
+          $result->invalidate( $tag,"確認用のメールアドレスが一致していません");
+      } else {
+          $result['valid'] = false;
+          $result['reason'][$name] = '確認用のメールアドレスが一致していません';
+        }
+      }
+    }
+  }
+  return $result;
+}
+
+add_filter( 'wpcf7_validate_email', 'wpcf7_main_validation_filter', 11, 2 );
+add_filter( 'wpcf7_validate_email*', 'wpcf7_main_validation_filter', 11, 2 );
 
 ?>

@@ -32,9 +32,7 @@ gulp.task('sass', function(){
     .pipe(sass({
         outputStyle: 'expanded',
     }))
-    .pipe(autoprefixer({
-        browsers: ["last 2 versions", "Firefox ESR"],
-    }))
+    .pipe(autoprefixer())
     .pipe(sourcemaps.write('./maps'))
     .pipe(gulp.dest(path.css))
     .pipe(filter(['**', '!**/*.map']))
@@ -46,7 +44,7 @@ gulp.task('sass', function(){
 gulp.task('server', function () {
     browserSync({
         notify: false,
-        proxy: "http://ki-potcom.local/"
+        proxy: "http://localhost.ki-pot.com/"
     });
 });
 

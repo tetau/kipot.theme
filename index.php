@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <main role="main" class="md_main">
-    <div class="l_row mx_1280 pd_side">
+    <div class="l_row mx_1280 pd_side5">
         <nav class="top_headNav">
             <ul>
                 <li>
@@ -40,7 +40,7 @@
         </nav>
     </div>
     <section class="md_info">
-        <div class="l_row mx_1280 pd_side">
+        <div class="l_row mx_1280 pd_side5">
             <div class="md_info__wrap">
                 <h2 class="fz_20 fw700 md_info__ttl" id="sc1" data-aos="fade-right" data-aos-anchor="#sc1" data-aos-offset="800"><span>お知らせ</span></h2>
                 <div class="innr">
@@ -79,7 +79,7 @@
         </div>
     </section>
     <section class="md_info">
-        <div class="l_row mx_1280 pd_side">
+        <div class="l_row mx_1280 pd_side5">
             <div class="md_fb__wrap">
                 <h2 class="fz_20 fw700 md_info__ttl right" id="sc2" data-aos="fade-left" data-aos-anchor="#sc2" data-aos-delay="500" data-aos-offset="800"><span>Facebook</span></h2>
                 <div class="innr">

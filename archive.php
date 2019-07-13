@@ -32,7 +32,6 @@
             </ul>
         </section>
 
-<?php elseif (is_tax('faqcat')) : ?>
 
 <?php else : ?>
 

@@ -89,7 +89,15 @@ add_action('wp_dashboard_setup', 'example_remove_dashboard_widgets');
     }
     add_action('login_head', 'custom_login_logo');
 
-
+//投稿ページのタイトルプレースホルダーを変更
+    function change_default_title( $title ) {
+        $screen = get_current_screen();
+        if ( $screen -> post_type == 'faq' ) {
+            $title = 'Questionを入力';
+        }
+        return $title;
+    }
+    add_filter('enter_title_here', 'change_default_title');
 
 
 //   エディタ・投稿関係

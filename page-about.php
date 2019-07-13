@@ -3,7 +3,7 @@
 
 
 <main class="md_main" role="main">
-
+    <h1 class="md_title hero"><?php the_title();?></h1>
     <div class="l_mainVisual about">
         <h3 class="l_mainVisual__copy about">
             <span class="fz_16 read about">ーキポットプレイスの精神ー</span>
@@ -14,7 +14,7 @@
     <div class="pAbout">
 
         <section class="pAbout_ststory">
-            <div class="l_row mx_1280 pd_side">
+            <div class="l_row mx_1280 pd_side5">
                 <div class="pAbout_ststory__wrap">
                     <h2 class="fz_28 fw700 md_info__ttl lrg right" id="sc1" data-aos="fade-left" data-aos-offset="200"><span>STARTING<br>STORY</span></h2>
                     <div class="pAbout_ststory__contents">
@@ -47,7 +47,7 @@
         </section><!-- /pAbout_ststory -->
 
         <section class="pAbout_philosophy">
-            <div class="l_row mx_1280 pd_side">
+            <div class="l_row mx_1280 pd_side5">
                 <div class="pAbout_philosophy__wrap">
                     <h2 class="fz_28 fw700 md_info__ttl lrg" id="sc2" data-aos="fade-right" data-aos-anchor="#sc2" data-aos-offset="800"><span>What we<br>should be<br>doing</span></h2>
                     <div class="pAbout_philosophy__contents">
@@ -74,7 +74,7 @@
         </section><!-- /pAbout_philosophy -->
 
         <section class="pAbout_activity">
-            <div class="l_row mx_1280 pd_side">
+            <div class="l_row mx_1280 pd_side5">
                 <div class="pAbout_activity__wrap">
                     <h2 class="fz_28 fw700 md_info__ttl lrg right" id="sc3" data-aos="fade-left" data-aos-anchor="#sc3" data-aos-offset="800"><span>BUSINESS<br>LINEUP</span></h2>
                     <div class="pAbout_activity__contents">
@@ -101,7 +101,7 @@
         </section><!-- /pAbout_activity -->
 
         <section class="pAbout_overview">
-            <div class="l_row mx_1280 pd_side">
+            <div class="l_row mx_1280 pd_side5">
                 <div class="pAbout_overview__wrap">
                     <h2 class="fz_28 fw700 md_info__ttl lrg" id="sc4" data-aos="fade-right" data-aos-anchor="#sc4" data-aos-offset="800"><span>company<br>overview</span></h2>
                     <div class="pAbout_overview__contents">
