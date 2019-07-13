@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" />
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/default.css" />
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/common.css" />
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/common.css?20190713" />
 
 
 <body>

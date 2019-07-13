@@ -33,6 +33,9 @@ __common
         background: #eee;
         padding: 15vw 0;
     }
+    &.entry_thx {
+        background: #eee;
+    }
 }
 .md_pCommon__head {
     padding-bottom: 60px;
@@ -680,6 +683,109 @@ __about
         }
     }
 }
+
+
+/*--------
+__pEntry
+-----------------------------------------------*/
+.pEntry {
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    border: 2px solid $c1;
+    border-radius: 15px;
+    padding: 15px;
+    @include media(540px) {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+.pEntry_head__ttl {
+    text-align: center;
+    margin-bottom: 1em;
+    span {
+        display: inline-block;
+        box-sizing: border-box;
+        color: $c1;
+        @include media(540px) {
+            font-size: 12px;
+        }
+    }
+}
+.pEntry_head {
+    text-align: center;
+    color: $c1;
+    .note {}
+    .phone {
+        a {
+            font-size: 36px;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-block;
+            box-sizing: border-box;
+            line-height: 1;
+            @include media(600px) {
+                font-size: 24px;
+            }
+        }
+    }
+    .email {
+        margin-top: .5em;
+        a {
+            font-size: 24px;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-block;
+            box-sizing: border-box;
+            line-height: 1;
+            @include media(600px) {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+.pEntry_flow {
+    max-width: 600px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+    ol {
+        > li {
+            position: relative;
+            padding-bottom: 30px;
+            &:last-child {
+                padding-bottom: 0;
+                &:after {
+                    display: none;
+                }
+            }
+            &:after {
+                content: '';
+                position: absolute;
+                bottom: 12px;
+                left: 50%;
+                border-right: 6px solid transparent;
+                border-top: 6px solid $c1;
+                border-left: 6px solid transparent;
+                transform: translateX(-50%);
+            }
+            p {
+                background: #fff;
+                border-radius: 15px;
+                text-align: center;
+                color: $c1;
+                font-weight: bold;
+                padding: .5em 1em;
+            }
+        }
+    }
+}
+.pEntry_flow__btn {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
 
 
 /*--------

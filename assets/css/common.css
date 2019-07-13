@@ -1278,6 +1278,10 @@ __common
   padding: 15vw 0;
 }
 
+.md_pCommon.entry_thx {
+  background: #eee;
+}
+
 .md_pCommon__head {
   padding-bottom: 60px;
 }
@@ -2170,6 +2174,130 @@ __about
 .pAbout_overview__contents .cvs_wrap a.cvs_btn span {
   position: relative;
   z-index: 2;
+}
+
+/*--------
+__pEntry
+-----------------------------------------------*/
+.pEntry {
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  border: 2px solid #008650;
+  border-radius: 15px;
+  padding: 15px;
+}
+
+@media screen and (max-width: 540px) {
+  .pEntry {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+.pEntry_head__ttl {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.pEntry_head__ttl span {
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #008650;
+}
+
+@media screen and (max-width: 540px) {
+  .pEntry_head__ttl span {
+    font-size: 12px;
+  }
+}
+
+.pEntry_head {
+  text-align: center;
+  color: #008650;
+}
+
+.pEntry_head .phone a {
+  font-size: 36px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  line-height: 1;
+}
+
+@media screen and (max-width: 600px) {
+  .pEntry_head .phone a {
+    font-size: 24px;
+  }
+}
+
+.pEntry_head .email {
+  margin-top: .5em;
+}
+
+.pEntry_head .email a {
+  font-size: 24px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  line-height: 1;
+}
+
+@media screen and (max-width: 600px) {
+  .pEntry_head .email a {
+    font-size: 16px;
+  }
+}
+
+.pEntry_flow {
+  max-width: 600px;
+  margin: 0 auto;
+  padding-bottom: 40px;
+}
+
+.pEntry_flow ol > li {
+  position: relative;
+  padding-bottom: 30px;
+}
+
+.pEntry_flow ol > li:last-child {
+  padding-bottom: 0;
+}
+
+.pEntry_flow ol > li:last-child:after {
+  display: none;
+}
+
+.pEntry_flow ol > li:after {
+  content: '';
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #008650;
+  border-left: 6px solid transparent;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.pEntry_flow ol > li p {
+  background: #fff;
+  border-radius: 15px;
+  text-align: center;
+  color: #008650;
+  font-weight: bold;
+  padding: .5em 1em;
+}
+
+.pEntry_flow__btn {
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 /*--------
